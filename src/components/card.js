@@ -7,21 +7,23 @@ class Card extends Component {
         super();
         
         this.state = {
-            color: "BLUE",
+            color: "blue",
             pluralNoun: "",
         };
+        
+        this.handleInputChange = this.handleInputChange.bind(this);
     }
     
-    handleInputChange() {
-        this.setState({ color: "red" })
-    };
+    handleInputChange(event) {
+        this.setState({ color: event.target.value });
+    }
     
     render() {
         
         return (
-            <div className="card>
+            <div className="card">
                 <h1>{this.state.color}</h1>
-                <input/>
+                <input placeholder={this.state.color} onChange={(event) => this.handleInputChange(event)}/>
             </div>
         );
         
