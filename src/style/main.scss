@@ -1,9 +1,18 @@
 .home {
     background-color: rgba(207, 207, 207, 0.06);
+    display: grid;
+    // align-items: center;
+    justify-items: center;    
+    grid-template-rows: [header-s] 218px [header-e card-s] minmax(736px, 994px) [card-e];
+}
+
+.header {
+    align-self: center
 }
 
 .card {
-    height: 736px;
+    min-height: 736px;
+    max-height: 994px;
     width: 1240px;
     box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
     border-radius: 7px;
@@ -17,17 +26,24 @@
         display: grid;
         grid-template-rows: repeat(4, 1fr);
         grid-template-columns: repeat(4, 1fr);
+        
+        justify-items: center;
+        align-items: center;
     }
 }
 
 .input {
+    display: grid;
+    // grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 26px 1fr;
+    
     &__title {
-        
+        grid-column: 2/3;
     }
     input {
-        
+        grid-column: 2/3;
     }
     &__number {
-        
+        grid-column: 1/2;
     }
 }
