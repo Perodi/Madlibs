@@ -63,10 +63,10 @@
     
     display: grid;
     grid-template-rows: 1fr 50px;
+    background-color: white;
     
     
     &__inputs {
-        background-color: skyblue;
         display: grid;
         grid-template-rows: repeat(4, 1fr);
         grid-template-columns: repeat(4, 1fr);
@@ -80,14 +80,33 @@
     display: grid;
     // grid-template-rows: repeat(3, 1fr);
     grid-template-columns: 26px 1fr;
+    font-family: Montserrat;
+    text-align: center;
     
     &__title {
         grid-column: 2/3;
+        border-top: 1px solid #B3B3B3;
+        color: #B3B3B3;
+        font-size: 12px;
+        font-weight: 300;
     }
     input {
+        border: none;
+        // width: 190px;
+        // height: 40px;
         grid-column: 2/3;
+        font-size: 15px;
+        text-align: center;
+        font-weight: 400;
+        
     }
     &__number {
+        color: white;
+        background-color: #00CB79;
         grid-column: 1/2;
+        font-size: 20px;
+        line-height: 24px;
+        padding-top: 1px;
+        border-radius: 50%;
     }
 }
